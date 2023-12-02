@@ -13,10 +13,12 @@ protocol AdventDay {
   init(data: String)
 
   /// Computes and returns the answer for part one.
-  func part1() async throws -> Any
+  func part1() async throws -> Result
 
   /// Computes and returns the answer for part two.
-  func part2() async throws -> Any
+  func part2() async throws -> Result
+  
+  associatedtype Result
 }
 
 extension AdventDay {
